@@ -12,8 +12,7 @@ export default function Contact() {
     setStatus('sending');
 
     
-    console.log("Service ID:", process.env.REACT_APP_EMAILJS_SERVICE_ID);
-    console.log("Public Key:", process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+    
 
     
     emailjs.sendForm(
