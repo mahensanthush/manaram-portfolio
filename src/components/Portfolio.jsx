@@ -1,7 +1,7 @@
 ﻿import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// --- Internal Slider Component for Multi-image Projects ---
+
 const ProjectSlider = ({ images }) => {
   const [idx, setIdx] = useState(0);
 
@@ -29,7 +29,7 @@ const ProjectSlider = ({ images }) => {
         />
       </AnimatePresence>
 
-      {/* Mini Navigation Arrows */}
+      
       {images.length > 1 && (
         <div className="absolute inset-x-2 top-1/2 -translate-y-1/2 flex justify-between opacity-0 group-hover/slider:opacity-100 transition-opacity z-20">
           <button onClick={prev} className="w-6 h-6 rounded-full bg-black/60 text-white flex items-center justify-center text-xs border border-white/10 hover:bg-[#00f0ff]">‹</button>
@@ -37,7 +37,7 @@ const ProjectSlider = ({ images }) => {
         </div>
       )}
 
-      {/* Progress Dots */}
+      
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1 z-20">
         {images.map((_, i) => (
           <div key={i} className={`h-1 rounded-full transition-all ${idx === i ? 'w-4 bg-[#00f0ff]' : 'w-1 bg-white/30'}`} />
@@ -108,13 +108,13 @@ export default function Portfolio() {
   return (
     <section id="portfolio" className="relative py-24 px-10 max-w-7xl mx-auto bg-[#0a0a0f] scroll-mt-32">
       
-      {/* Header */}
+      
       <div className="text-center max-w-2xl mx-auto mb-16 relative z-20">
         <h2 className="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight uppercase italic">Selected Work</h2>
         <p className="text-slate-400 text-xs md:text-sm leading-relaxed font-medium">Archive of technical and creative solutions.</p>
       </div>
 
-      {/* Tabs */}
+      
       <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-16">
         {categories.map((cat) => (
           <button
@@ -132,7 +132,7 @@ export default function Portfolio() {
         ))}
       </div>
 
-      {/* Grid */}
+      
       <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <AnimatePresence mode="popLayout">
           {filteredProjects.map((project) => (
@@ -144,10 +144,10 @@ export default function Portfolio() {
               exit={{ opacity: 0, scale: 0.9 }}
               className="group relative aspect-[4/5] overflow-hidden rounded-xl bg-[#11111a] border border-white/5"
             >
-              {/* SLIDER COMPONENT */}
+              
               <ProjectSlider images={project.images} />
 
-              {/* OVERLAY */}
+              
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-transparent to-transparent opacity-90 pointer-events-none flex flex-col justify-end p-8">
                 <span className="text-[9px] font-bold text-[#00f0ff] tracking-[0.3em] uppercase block mb-2">{project.tags.join(' / ')}</span>
                 <h3 className="text-2xl font-black text-white tracking-tighter uppercase italic">{project.title}</h3>
