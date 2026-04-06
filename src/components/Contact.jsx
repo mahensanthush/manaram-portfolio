@@ -1,9 +1,9 @@
-import { useState, useRef } from 'react'; // Added useRef
+import { useState, useRef } from 'react'; 
 import { motion, AnimatePresence } from 'framer-motion';
-import emailjs from '@emailjs/browser'; // Import the library
+import emailjs from '@emailjs/browser'; 
 
 export default function Contact() {
-  const form = useRef(); // We use a ref to target the form element
+  const form = useRef(); 
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState('idle');
 
@@ -11,14 +11,20 @@ export default function Contact() {
     e.preventDefault();
     setStatus('sending');
 
-    // We use import.meta.env to grab the keys from your .env file
+    // DEBUG: This will show in your browser console (F12) 
+    // to confirm the keys are actually being read.
+    console.log("Service ID:", process.env.REACT_APP_EMAILJS_SERVICE_ID);
+    console.log("Public Key:", process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+
+    // CHANGED: Use process.env for Create React App
     emailjs.sendForm(
-      import.meta.env.REACT_EMAILJS_SERVICE_ID, 
-      import.meta.env.REACT_EMAILJS_TEMPLATE_ID, 
+      process.env.REACT_APP_EMAILJS_SERVICE_ID, 
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID, 
       form.current, 
-      import.meta.env.REACT_EMAILJS_PUBLIC_KEY
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
     )
     .then((result) => {
+        console.log("Email sent successfully!");
         setStatus('success');
         setFormData({ name: '', email: '', message: '' });
         setTimeout(() => setStatus('idle'), 5000);
@@ -79,7 +85,7 @@ export default function Contact() {
               </motion.div>
             ) : (
               <motion.form 
-                ref={form} // Added the ref here
+                ref={form} 
                 key="form" 
                 onSubmit={handleSubmit} 
                 className="space-y-6 relative z-10"
@@ -87,7 +93,7 @@ export default function Contact() {
                 <div className="space-y-2">
                   <label className="text-[10px] font-black text-slate-500 uppercase tracking-[0.3em] ml-1">Name</label>
                   <input 
-                    name="user_name" // Ensure these names match your EmailJS template!
+                    name="user_name" 
                     required type="text" value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
                     placeholder="Mahen..."
@@ -98,7 +104,7 @@ export default function Contact() {
                 <div className="space-y-2">
                   <label className="text-[10px] font-black text-slate-500 uppercase tracking-[0.3em] ml-1">Email</label>
                   <input 
-                    name="user_email" // Match EmailJS template
+                    name="user_email" 
                     required type="email" value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
                     placeholder="manaramcreations@gmail.com"
@@ -109,7 +115,7 @@ export default function Contact() {
                 <div className="space-y-2">
                   <label className="text-[10px] font-black text-slate-500 uppercase tracking-[0.3em] ml-1">Message</label>
                   <textarea 
-                    name="message" // Match EmailJS template
+                    name="message" 
                     required rows="4" value={formData.message}
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
                     placeholder="Tell us about your project..."
