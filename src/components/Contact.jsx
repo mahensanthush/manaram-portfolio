@@ -11,23 +11,19 @@ export default function Contact() {
     e.preventDefault();
     setStatus('sending');
 
-    // Replace these strings with your actual EmailJS keys
+    // We use import.meta.env to grab the keys from your .env file
     emailjs.sendForm(
-      'service_dyuq94p', 
-      'template_ksc1tba', 
+      import.meta.env.VITE_EMAILJS_SERVICE_ID, 
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
       form.current, 
-      's9KE_jRdxMge4dy9M'
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
     .then((result) => {
-        console.log("Success:", result.text);
         setStatus('success');
         setFormData({ name: '', email: '', message: '' });
-        
-        // Reset to idle after 5 seconds
         setTimeout(() => setStatus('idle'), 5000);
     }, (error) => {
-        console.log("Error:", error.text);
-        alert("Failed to send message. Please try again.");
+        console.error("EmailJS Error:", error);
         setStatus('idle');
     });
   };
