@@ -13,10 +13,10 @@ export default function Contact() {
 
     // We use import.meta.env to grab the keys from your .env file
     emailjs.sendForm(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID, 
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
+      import.meta.env.REACT_EMAILJS_SERVICE_ID, 
+      import.meta.env.REACT_EMAILJS_TEMPLATE_ID, 
       form.current, 
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      import.meta.env.REACT_EMAILJS_PUBLIC_KEY
     )
     .then((result) => {
         setStatus('success');
