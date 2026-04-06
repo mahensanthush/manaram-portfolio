@@ -4,12 +4,10 @@ export default function Hero() {
   return (
     <section id="home" className="relative h-screen flex flex-col justify-center items-center overflow-hidden bg-[#0a0a0f]">
       
-      {/* --- 3D BACKGROUND ENVIRONMENT (Scaled down for better breathing room) --- */}
+      
       <div className="absolute inset-0 pointer-events-none z-0" style={{ perspective: '1200px' }}>
         
-        {/* === LEFT SIDE FIELD === */}
         
-        {/* L1. Far-Left Massive Cyan Pane */}
         <motion.div 
           animate={{ y: [-15, 15, -15], rotateZ: [18, 20, 18] }}
           transition={{ duration: 8.5, repeat: Infinity, ease: "easeInOut" }}
@@ -17,7 +15,7 @@ export default function Hero() {
           style={{ rotateX: 40, rotateY: -35, skewX: '-20deg', background: 'linear-gradient(135deg, rgba(0,240,255,0.18) 0%, transparent 100%)' }}
         />
 
-        {/* L2. Mid-Left Cyan Glass Pane */}
+        
         <motion.div 
           animate={{ y: [-10, 10, -10], rotateZ: [15, 18, 15] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
@@ -25,7 +23,7 @@ export default function Hero() {
           style={{ rotateX: 30, rotateY: -30, skewX: '-15deg', background: 'linear-gradient(135deg, rgba(0,240,255,0.12) 0%, transparent 100%)' }}
         />
 
-        {/* L2.5 Medium Cyan Box Wireframe */}
+        
         <motion.div 
           animate={{ y: [0, -6, 0], rotateZ: [-5, -8, -5] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
@@ -40,7 +38,7 @@ export default function Hero() {
           </svg>
         </motion.div>
 
-        {/* L3. Solid Tile */}
+        
         <motion.div 
           animate={{ y: [10, -10, 10], rotateZ: [10, 15, 10] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
@@ -48,7 +46,7 @@ export default function Hero() {
           style={{ rotateX: 30, rotateY: 15, background: 'linear-gradient(135deg, rgba(255,0,170,0.2) 0%, rgba(122,0,255,0.1) 50%, transparent 100%)' }}
         />
         
-        {/* L3.5 Small Purple Pyramid Wireframe */}
+        
         <motion.div 
           animate={{ y: [0, 8, 0], rotateZ: [15, 18, 15] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
@@ -61,7 +59,7 @@ export default function Hero() {
           </svg>
         </motion.div>
 
-        {/* L4. Medium Glass Pane */}
+        
         <motion.div 
           animate={{ y: [-12, 12, -12], rotateZ: [-10, -8, -10] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
@@ -69,7 +67,7 @@ export default function Hero() {
           style={{ rotateX: 25, rotateY: -20, skewY: '10deg', background: 'linear-gradient(225deg, rgba(0,240,255,0.08) 0%, rgba(168,85,247,0.05) 50%, transparent 100%)' }}
         />
         
-        {/* L6. Small Wireframe Pyramid */}
+        
         <motion.div 
           animate={{ y: [8, -8, 8], rotateZ: [5, 10, 5] }}
           transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut" }}
@@ -82,7 +80,7 @@ export default function Hero() {
           </svg>
         </motion.div>
 
-        {/* L7. Massive Bottom Left Magenta Pane */}
+        
         <motion.div 
           animate={{ y: [12, -12, 12], rotateZ: [-15, -12, -15] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
@@ -90,7 +88,7 @@ export default function Hero() {
           style={{ rotateX: 40, rotateY: 25, skewX: '20deg', background: 'linear-gradient(135deg, rgba(255,0,170,0.15) 0%, rgba(122,0,255,0.08) 50%, transparent 100%)' }}
         />
 
-        {/* L8. Middle Shard Group */}
+        
         <div className="absolute top-[65%] left-[12%] w-48 h-48" style={{ perspective: 300 }}>
           <div className="absolute top-0 left-0 w-6 h-10 glass border-[#00f0ff]/30 transform rotate-12"></div>
           <div className="absolute top-8 left-8 w-5 h-8 border border-[#ff00aa]/30 transform rotate-[-30deg]"></div>
@@ -98,9 +96,7 @@ export default function Hero() {
         </div>
 
 
-        {/* === RIGHT SIDE FIELD === */}
         
-        {/* R1. Top Right Wireframe Prism */}
         <motion.div 
           animate={{ y: [-5, 5, -5], rotateZ: [10, 15, 10] }}
           transition={{ duration: 7.5, repeat: Infinity, ease: "easeInOut" }}
@@ -114,7 +110,7 @@ export default function Hero() {
           </svg>
         </motion.div>
 
-        {/* R2. Top Right Glass Pane */}
+        
         <motion.div 
           animate={{ y: [-12, 12, -12], rotateZ: [-10, -12, -10] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
@@ -122,7 +118,7 @@ export default function Hero() {
           style={{ rotateX: 20, rotateY: 30, skewX: '-10deg', background: 'linear-gradient(135deg, rgba(122,0,255,0.1) 0%, rgba(0,240,255,0.05) 50%, transparent 100%)' }}
         />
 
-        {/* R3. Small Wireframe (Simple pyramid) */}
+        
         <motion.div 
           animate={{ y: [5, -5, 5], rotateZ: [15, 18, 15] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
@@ -134,7 +130,7 @@ export default function Hero() {
           </svg>
         </motion.div>
 
-        {/* R4. Mid-Right Glass Pane */}
+        
         <motion.div 
           animate={{ y: [15, -15, 15], rotateZ: [-15, -12, -15] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
@@ -142,7 +138,7 @@ export default function Hero() {
           style={{ rotateX: 35, rotateY: -25, skewY: '-15deg', background: 'linear-gradient(135deg, rgba(255,0,170,0.15) 0%, rgba(122,0,255,0.1) 50%, transparent 100%)' }}
         />
 
-        {/* R5. Bottom Right Complex Intersected Cube */}
+        
         <motion.div 
           animate={{ y: [10, -10, 10], rotateZ: [5, 10, 5] }}
           transition={{ duration: 8.5, repeat: Infinity, ease: "easeInOut" }}
@@ -158,7 +154,7 @@ export default function Hero() {
           <div className="absolute w-[120%] h-6 border border-[#ff00aa] shadow-[0_0_20px_rgba(255,0,170,0.5)]" style={{ transform: 'rotate(-15deg) translateZ(20px)', background: 'linear-gradient(90deg, rgba(122,0,255,0.4), rgba(255,0,170,0.4))' }}></div>
         </motion.div>
 
-        {/* R6. Far-Right Purple Glass Pane */}
+        
         <motion.div 
           animate={{ y: [-15, 15, -15], rotateZ: [-25, -20, -25] }}
           transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
@@ -168,7 +164,7 @@ export default function Hero() {
 
       </div>
 
-      {/* --- MAIN CENTERED TEXT --- */}
+      
       <div className="z-10 flex flex-col items-center justify-center w-full px-10 relative bg-[radial-gradient(ellipse_at_center,_rgba(10,10,15,0.6)_0%,_transparent_60%)] py-20">
         <motion.h1 
           initial={{ opacity: 0, scale: 0.95 }}
@@ -182,7 +178,7 @@ export default function Hero() {
         </motion.h1>
       </div>
 
-      {/* --- BOTTOM ROW --- */}
+      
       <div className="absolute bottom-10 w-full px-10 md:px-20 flex justify-between items-end z-20 pointer-events-none">
         <div className="hidden md:block w-32"></div>
         <motion.div 
