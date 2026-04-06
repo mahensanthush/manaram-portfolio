@@ -18,10 +18,10 @@ export default function EcoBrand() {
 
   return (
     <section className="relative pt-28 pb-16 px-6 max-w-5xl mx-auto bg-[#0a0a0f]">
-      {/* Scroll Anchor */}
+      
       <div id="work" className="absolute -top-[110px] left-0 w-full h-1 pointer-events-none" />
 
-      {/* --- MATCHED GROWTH PATH STYLE HEADER --- */}
+      
       <div className="text-center max-w-2xl mx-auto mb-16 relative z-20">
         <h2 className="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight">Featured Case Study</h2>
         <p className="text-slate-400 text-xs md:text-sm leading-relaxed font-medium">
@@ -29,7 +29,6 @@ export default function EcoBrand() {
         </p>
       </div>
 
-      {/* --- Interactive Glass Container --- */}
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -37,7 +36,7 @@ export default function EcoBrand() {
         className="relative w-full glass rounded-[1.5rem] border border-white/5 p-6 md:p-8 shadow-2xl flex flex-col lg:flex-row gap-10 overflow-hidden bg-[#0a0a0f]/40 backdrop-blur-3xl"
       >
         
-        {/* LEFT: VISUAL */}
+        
         <div className="w-full lg:w-[55%] flex flex-col">
           <div className="mb-4">
             <span className="text-[9px] text-[#00f0ff] uppercase tracking-[0.3em] font-bold">Cane Industry Hub</span>
@@ -59,7 +58,7 @@ export default function EcoBrand() {
           </div>
         </div>
 
-        {/* RIGHT: INTERACTIVE STEPS */}
+        
         <div className="w-full lg:w-[45%] flex flex-col justify-center space-y-6">
           <div className="flex flex-col gap-3">
             {['challenge', 'insight', 'result'].map((tab) => (
@@ -95,7 +94,7 @@ export default function EcoBrand() {
             </AnimatePresence>
           </div>
 
-          {/* Connection Indicators */}
+         
           <div className="flex gap-2">
              <div className={`h-1.5 rounded-full transition-all duration-500 ${activeTab === 'challenge' ? 'w-8 bg-[#ff00aa]' : 'w-2 bg-white/10'}`} />
              <div className={`h-1.5 rounded-full transition-all duration-500 ${activeTab === 'insight' ? 'w-8 bg-[#00f0ff]' : 'w-2 bg-white/10'}`} />
