@@ -11,12 +11,11 @@ export default function Contact() {
     e.preventDefault();
     setStatus('sending');
 
-    // DEBUG: This will show in your browser console (F12) 
-    // to confirm the keys are actually being read.
+    
     console.log("Service ID:", process.env.REACT_APP_EMAILJS_SERVICE_ID);
     console.log("Public Key:", process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
 
-    // CHANGED: Use process.env for Create React App
+    
     emailjs.sendForm(
       process.env.REACT_APP_EMAILJS_SERVICE_ID, 
       process.env.REACT_APP_EMAILJS_TEMPLATE_ID, 
