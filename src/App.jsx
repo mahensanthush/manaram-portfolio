@@ -2,7 +2,7 @@
 import Hero from './components/Hero';
 import GrowthPath from './components/GrowthPath';
 import EcoBrand from './components/EcoBrand';
-import Portfolio from './components/Portfolio'; // <-- Import the newly styled Portfolio
+import Portfolio from './components/Portfolio'; 
 import Contact from './components/Contact';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <section id="process"><GrowthPath /></section>
         <section id="work">
           <EcoBrand />
-          <Portfolio /> {/* <-- Add it right here to extend the Work section */}
+          <Portfolio /> 
         </section>
         <section id="contact"><Contact /></section>
       </div>
