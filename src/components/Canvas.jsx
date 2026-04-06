@@ -26,11 +26,11 @@ export default function Canvas() {
           </h2>
         </div>
 
-        {/* --- Floating 3D Objects (Rebalanced to fill left and right) --- */}
         
-        {/* LEFT SIDE Elements */}
+        
+        
         <div className="absolute top-[25%] left-[12%] flex flex-col gap-10 z-10">
-             {/* Simulated Glossy Purple Megaphone */}
+             
              <motion.div 
                animate={{ y: [0, -15, 0] }} 
                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} 
@@ -40,7 +40,7 @@ export default function Canvas() {
                 <div className="relative z-10 w-1/2 h-2/3 rounded-lg bg-gradient-to-br from-[#7a00ff] to-[#00f0ff] shadow-[0_0_10px_#00f0ff]" />
              </motion.div>
 
-             {/* Simulated Pink 'M' Abstract */}
+             
              <motion.div 
                animate={{ y: [0, 12, 0] }} 
                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.5 }} 
@@ -51,9 +51,9 @@ export default function Canvas() {
              </motion.div>
         </div>
 
-        {/* RIGHT SIDE Elements */}
+        
         <div className="absolute top-[20%] right-[15%] flex flex-col gap-12 z-10">
-             {/* Simulated Dark Gray Cart */}
+             
              <motion.div 
                animate={{ y: [0, 10, 0] }} 
                transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.2 }} 
@@ -63,7 +63,7 @@ export default function Canvas() {
                🛒
              </motion.div>
 
-             {/* Simulated Glossy Cyan Gear */}
+             
              <motion.div 
                animate={{ y: [0, -10, 0] }} 
                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.7 }} 
@@ -73,19 +73,19 @@ export default function Canvas() {
                SEO
              </motion.div>
         </div>
-        {/* --- End Floating Objects --- */}
+        
 
 
-        {/* Bottom Section (Progress Meter & Submit) */}
+        
         <div className="w-full flex flex-col items-center z-20 mt-auto">
           <span className="text-[11px] font-bold text-white tracking-[0.25em] mb-4">BRAND POTENTIAL</span>
           
-          {/* EKG Path Meter */}
+          
           <div className="w-3/4 h-16 relative flex items-center justify-center mb-6">
              <svg width="100%" height="100%" viewBox="0 0 500 80" preserveAspectRatio="none" className="absolute inset-0">
-                {/* Background Track */}
+                
                 <path d="M 0 60 L 150 60 L 180 30 L 350 30 L 500 30" fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
-                {/* Active Neon Pulse */}
+                
                 <path d="M 0 60 L 150 60 L 180 30 L 280 30" fill="none" stroke="url(#active-gradient)" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" className="drop-shadow-[0_0_10px_#00f0ff]" />
                 
                 <defs>
@@ -96,13 +96,13 @@ export default function Canvas() {
                 </defs>
              </svg>
              
-             {/* Track Checkpoints */}
+             
              <div className="absolute left-[5%] top-6 w-6 h-6 bg-[#00f0ff] rounded shadow-[0_0_20px_#00f0ff,_inset_0_0_10px_white/50]"></div>
              <div className="absolute left-[15%] top-6 w-6 h-6 bg-slate-800 border-2 border-slate-600 rounded"></div>
              <div className="absolute left-[28%] top-6 w-6 h-6 bg-slate-800 border-2 border-slate-600 rounded"></div>
           </div>
 
-          {/* Submit Button */}
+          
           <button className="glass px-10 py-3 rounded border border-[#00f0ff]/50 hover:bg-[#00f0ff]/10 transition-all group relative overflow-hidden mt-4 shadow-[0_0_15px_rgba(0,240,255,0.1)] backdrop-blur-md">
              <div className="absolute inset-0 bg-[#00f0ff] opacity-0 group-hover:opacity-10 blur-md transition-opacity" />
              <span className="text-xs font-black tracking-[0.2em] text-[#00f0ff] relative z-10 group-hover:text-white transition-colors">
