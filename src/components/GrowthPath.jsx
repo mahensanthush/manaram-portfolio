@@ -4,7 +4,7 @@ export default function GrowthPath() {
   return (
     <section id="process" className="relative py-32 px-10 max-w-7xl mx-auto bg-[#0a0a0f] overflow-hidden">
       
-      {/* --- HEADER --- */}
+     
       <div className="text-center max-w-2xl mx-auto mb-20 relative z-20">
         <h2 className="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight">Growth Path</h2>
         <p className="text-slate-400 text-xs md:text-sm leading-relaxed font-medium">
@@ -12,10 +12,10 @@ export default function GrowthPath() {
         </p>
       </div>
 
-      {/* --- MAIN PATH CONTAINER (Locks the line and grid together) --- */}
+      
       <div className="relative w-full">
         
-        {/* The Continuous Glowing EKG Line (Locked exactly to the vertical center of the h-48 image blocks) */}
+        
         <div className="absolute top-24 left-0 w-full h-32 -translate-y-1/2 z-0 hidden md:block">
           <svg width="100%" height="100%" viewBox="0 0 1200 100" preserveAspectRatio="none">
              <defs>
@@ -25,7 +25,7 @@ export default function GrowthPath() {
                  <stop offset="100%" stopColor="#ff00aa" />
                </linearGradient>
              </defs>
-             {/* Adjusted Path to ensure the flat lines pass perfectly behind the icons */}
+             
              <path 
                 d="M-50,50 L200,50 L230,10 L270,90 L310,10 L340,50 L550,50 L580,0 L620,100 L650,50 L860,50 L890,20 L920,80 L950,50 L1250,50" 
                 fill="none" 
@@ -38,10 +38,10 @@ export default function GrowthPath() {
           </svg>
         </div>
 
-        {/* --- THE THREE STEPS --- */}
+        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 relative z-10">
           
-          {/* STEP 1: BRANDING */}
+          
           <div className="flex flex-col items-center md:items-start text-left">
             <div className="w-full h-48 flex items-center justify-center md:justify-start mb-6">
               <motion.img 
@@ -63,7 +63,7 @@ export default function GrowthPath() {
             </p>
           </div>
 
-          {/* STEP 2: MARKETING */}
+         
           <div className="flex flex-col items-center md:items-start text-left">
             <div className="w-full h-48 flex items-center justify-center md:justify-start mb-6">
               <motion.img 
@@ -85,10 +85,10 @@ export default function GrowthPath() {
             </p>
           </div>
 
-          {/* STEP 3: WEB & DESIGN */}
+          
           <div className="flex flex-col items-center md:items-start text-left">
             <div className="w-full h-48 flex items-center justify-center md:justify-start mb-6">
-              {/* Replaced SVG with a motion.img tag to pull from the assets folder */}
+             
               <motion.img 
                 animate={{ y: [-5, 5, -5] }} 
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
